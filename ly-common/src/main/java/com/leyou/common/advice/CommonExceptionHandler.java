@@ -6,10 +6,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-@ControllerAdvice
+@ControllerAdvice //拦截java controller类
 public class CommonExceptionHandler {
 
-    @ExceptionHandler(LyException.class)
+    @ExceptionHandler(LyException.class) //拦截LyException异常
     public ResponseEntity<ExceptionResult> handleException(LyException e){
         return ResponseEntity.status(e.getExceptionEnum().getCode())
                 .body(new ExceptionResult(e.getExceptionEnum()));

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+@NoArgsConstructor //空构造方法
 @AllArgsConstructor
 @Getter
 public enum  ExceptionEnum {
